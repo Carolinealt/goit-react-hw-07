@@ -13,7 +13,7 @@ function App() {
   }, [dispatch]);
   return (
     <>
-      Phonebook
+      <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       <ContactList />
