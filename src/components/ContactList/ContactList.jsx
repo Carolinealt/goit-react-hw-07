@@ -2,26 +2,20 @@ import clsx from "clsx";
 import Contact from "./Contact/Contact";
 import css from "./ContactList.module.css";
 import { useSelector } from "react-redux";
+import { selectFilteredContacts } from "../../redux/contactsSlice";
 const ContactList = () => {
-  const contactsList = useSelector((state) => {
-    return state.contacts.items;
-  });
-  const filterValue = useSelector((state) => {
-    console.log("state.filter :>> ", state.filter);
-    return state.filter;
-  });
-
-  const filteredContacts =
-    filterValue !== ""
-      ? contactsList.filter((contact) =>
-          contact.name.toLowerCase().includes(filterValue)
-        )
-      : contactsList;
+  const contactsList = useSelector(selectFilteredContacts);
+  // const filteredContacts =
+  //   filterValue !== ""
+  //     ? contactsList.filter((contact) =>
+  //         contact.name.toLowerCase().includes(filterValue)
+  //       )
+  //     : contactsList;
 
   return (
     <>
       <ul className={clsx(css.list)}>
-        {filteredContacts.map((contact) => {
+        {contactsList.map((contact) => {
           return (
             <li key={Math.random()} className={clsx(css.listItem)}>
               <Contact
