@@ -2,20 +2,21 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 900px;
+    gap: 10px;
 }
 
 .listItem {
     border: 1px white solid;
     border-radius: 15px;
-    margin: 10px;
     font-size: 20px;
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 60px) / 3);
     padding: 20px 0;
     transition: 500ms ease-in-out;
 }
 
 .listItem:hover,
-.listItem:focus{
-    transform: translateY(-5%) ;
+.listItem:focus {
+    transform: translateY(-5%);
+    border-color: rgb(0, 51, 255);
 }

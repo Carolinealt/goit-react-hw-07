@@ -30,9 +30,11 @@ const ContactForm = () => {
       >
         <Form className={css.form}>
           <label htmlFor="name">
+            Name
             <Field type="text" name="name" className={css.field} />
           </label>
           <label htmlFor="number">
+            Number
             <Field type="text" name="number" className={css.field} />
           </label>
           <button type="submit" className={css.addBtn}>

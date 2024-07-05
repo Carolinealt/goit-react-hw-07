@@ -1,8 +1,12 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 15px auto;
     gap: 9px;
+    width: 400px;
+    text-align: left;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.566);
 }
 
 .addBtn {
