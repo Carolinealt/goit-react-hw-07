@@ -4,10 +4,10 @@ import css from "./ContactList.module.css";
 import { useSelector } from "react-redux";
 const ContactList = () => {
   const contactsList = useSelector((state) => {
-    console.log('state :>> ', state.contacts.items);
     return state.contacts.items;
   });
   const filterValue = useSelector((state) => {
+    console.log("state.filter :>> ", state.filter);
     return state.filter;
   });
 
@@ -23,7 +23,7 @@ const ContactList = () => {
       <ul className={clsx(css.list)}>
         {filteredContacts.map((contact) => {
           return (
-            <li key={contact.id} className={clsx(css.listItem)}>
+            <li key={Math.random()} className={clsx(css.listItem)}>
               <Contact
                 name={contact.name}
                 number={contact.number}
